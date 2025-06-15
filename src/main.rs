@@ -28,7 +28,7 @@ fn main() -> Result<(), RCONError> {
     assert!(auth_result.is_success());
 
     // Execute command request to RCON server (SERVERDATA_EXECCOMMAND)
-    let response = client.execute(RCONRequest::new("Hello, World!".to_string()))?;
+    let response = client.execute(RCONRequest::new("say Hello, World!".to_string()))?;
     println!("Server response: {}", response.body);
 
     Ok(())
